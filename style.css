@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin-top: 50px;
+  font-size: 30px;
+  border-bottom: 2px solid #999;
+  padding-bottom: 20px;
+}
+
+.main {
+  width: 750px;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  position: relative;
+}
+
+.main h3 {
+  margin-right: 85px;
+}
+
+.main ul {
+  margin: 15px;
+  position: absolute;
+  left: 115px;
+  top: 60px;
+}
+
+.main ul li {
+  padding: 3px;
+}
+
+.main textarea {
+  resize: none;
+  width: 300px;
+  height: 100px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/* keyboard styles */
+
+.keyboard {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  background: #004134;
+  user-select: none;
+  transition: bottom 0.6s;
+}
+
+.keys {
+  text-align: center;
+}
+
+.keys .key {
+  width: 6%;
+  max-width: 70px;
+  height: 50px;
+  padding: 0px;
+  margin: 3px;
+  background: rgba(250, 250, 250, 0.2);
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: top;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+}
+
+.key.keyWide {
+  width: 15%;
+  max-width: 85px;
+}
+
+.key.keyExtraWide {
+  width: 90%;
+  max-width: 400px;
+}
+
+.key.keyActivable::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 10px;
+  left: 15px;
+}
+
+.key.keyActive::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgb(40, 214, 80);
+  position: absolute;
+  top: 10px;
+  left: 15px;
+}
+
+.key.keyDark {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.key:active {
+  background: rgba(250, 250, 250, 0.12);
+}
+
+.keyboard.hidden {
+  bottom: -100%;
+}
