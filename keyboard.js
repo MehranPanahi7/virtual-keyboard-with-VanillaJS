@@ -210,7 +210,7 @@ const Keyboard = {
     this.elements.main.classList.remove("hidden");
   },
 
-  close() {
+  close(onInput, onClose) {
     this.properties.values = "";
     this.eventHanlder.onInput = onInput;
     this.eventHanlder.onClose = onClose;
